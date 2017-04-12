@@ -1,0 +1,47 @@
+<div id="sidebar-wrapper">
+    <% if(usertype == 'admin'){ %>
+        <ul class="sidebar-nav">
+            
+            <li>
+                <a href="#">Students</a>
+            </li>
+            <li>
+                <a href="#">Teachers</a>
+            </li>
+            <li>
+                <a href="#">Classes</a>
+            </li>
+            <li>
+                <a href="#">Admin</a>
+            </li>
+            <li>
+                <a href="#">News Feed</a>
+            </li>
+            <li>
+                <a href="#">Messaging</a>
+            </li>
+            <li>
+                <a href="#">Settings</a>
+            </li>
+        </ul>
+    <% } else { %>
+            <ul class="sidebar-nav">
+            
+                <li>
+                    <a href="#">Class Activities</a>
+                </li>
+                <li>
+                    <a href="#">Student Data</a>
+                </li>
+                <li>
+                    <a href="#">Daily Notes</a>
+                </li>
+                <li>
+                    <a href="#">Messaging</a>
+                </li>
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+            </ul>
+    <% } %>
+</div>

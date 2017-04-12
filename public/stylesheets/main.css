@@ -1,0 +1,100 @@
+body{
+	background-color: #BAB6B7;
+	height: 800px;
+}
+
+div.header{
+	height: 20%;
+	color: #E80C50;
+}
+
+div.body{
+	height: 60%;
+}
+
+div.footer{
+	height: 20%;
+}
+
+div.container{
+	max-height: 99%;
+    width: 33%;
+    background-color: white;
+    align-self: center;
+    left: 33%;
+    position: absolute;
+    text-align: center;
+}
+
+button.forgot{
+    position: relative;
+    left: 56.4%;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: #7d7c7c;
+    background-color: #BAB6B7;
+    font-size: 15px;
+}
+
+h1.title{
+	position: absolute;
+    left: 1%;
+    font-size: 40px;
+}
+
+input[type=text], input[type=password] {
+    width: 90%;
+    padding: 3% 20px;
+    margin: 3% 0;
+    display: inline-block;
+    border: solid #7d7c7c;
+    box-sizing: border-box;
+    border-width: 0px 0px 2px 0px;
+    font-size: 15px;
+    color: #bab6b7;
+}
+
+.loginButton, .registerButton{
+    background-color: #E80C50;
+    color: white;
+    padding: 3% 20px;
+    margin: 4% 0;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    font-size: 15px; 
+    border-radius: 40px;
+}
+
+svg.logo{
+	height: 40%;
+    padding: 9%;
+}
+svg.mainlogo{
+    height: 400px;
+    padding: 9%;
+}
+
+ul {
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    padding: 6px;
+    border-right: 1px solid #E80C50;
+}
+
+li a {
+    color: #E80C50;
+    text-align: center;
+    text-decoration: none;
+}
