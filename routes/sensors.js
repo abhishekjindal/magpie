@@ -11,6 +11,8 @@ router.post('/receive', function(request, respond) {
     filePath = __dirname + '/sensors/';
     console.log(request.body.data);
     console.log(request.files);
+
+    
     request.on('data', function(data) {
     	//var obj = JSON.parse(data);
         body += data;
@@ -18,7 +20,7 @@ router.post('/receive', function(request, respond) {
 
     request.on('end', function (){
 
-    	fs.writeFile('logfile2.csv', request.body.data, function() {
+    	fs.writeFile('logfile2.csv', body, function() {
             respond.end();
         });
     });
