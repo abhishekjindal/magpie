@@ -11,7 +11,7 @@ npm install
 # To create table
 node models/(filename)
 
-#Start server
+# Start server
 npm start
 
 # Client side 
