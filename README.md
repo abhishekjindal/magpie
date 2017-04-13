@@ -1,24 +1,24 @@
-## magpie
+# magpie
 Rapid Prototyping of Computer Systems 2017
 
-# Install node
+## Install node
 https://nodejs.org/en/
 
-# Install postgres
+## Install postgres
 https://www.postgresql.org
 
-# Create a database magpie in PostgreSQL
+## Create a database magpie in PostgreSQL
 psql
 create database magpie;
 
-# Install dependencies
+## Install dependencies
 npm install
 
-# To create table
+## To create table
 node models/(filename)
 
-# Start server
+## Start server
 npm start
 
-# Client side 
+## Client side 
 http://localhost:3000/
