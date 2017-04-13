@@ -1,5 +1,11 @@
-# magpie
+## magpie
 Rapid Prototyping of Computer Systems 2017
+
+# Install node
+https://nodejs.org/en/
+
+# Install postgres
+https://www.postgresql.org
 
 # Create a database magpie in PostgreSQL
 psql
