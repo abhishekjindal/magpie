@@ -63,7 +63,7 @@ router.post('/login', function(req, res, next) {
 
 });
 
-router.post('/logout', function(req, res, next){
+router.get('/logout', function(req, res, next){
 	req.session.destroy(function(err) {
 	  if(err) {
 	    console.log(err);
