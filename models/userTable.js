@@ -15,3 +15,4 @@ const query = client.query(
   +' insert into users (email,password,name,usertype) values (\'teach\',\'teach\',\'teach\',\'teacher\');'
   );
 query.on('end', () => { client.end(); });
+

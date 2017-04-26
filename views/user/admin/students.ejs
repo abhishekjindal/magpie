@@ -1,1 +1,91 @@
-<h1> students </h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<%include ../modules/head.ejs%>
+</head>
+
+<body>
+
+   	<% var usertype = typeof type!='undefined' ? type : 'admin'%>
+   	<% var query = typeof query!='undefined' ? query : ''%>
+   	<% var students = typeof children!='undefined' ? children : []%>
+   	<% var child = typeof child!='undefined' ? child : []%>
+
+    <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Students</h1>
+                        <a href="/auth/logout">Logout</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div id="wrapper" class="toggled">
+
+        
+        <% include ../modules/sidebar.ejs %>
+        	
+        <div id="page-content-wrapper">
+        <%if(query == "all" || query == '') {%>
+
+        	<a href="/user/admin/students?option=addstudent">Add Student</a>
+
+        	<ul type="none">
+				<% for(var i=0; i<students.length; i++) {%>
+				<a href="/users/getstudent?option=student&id=<%= students[i].child_id %>">
+				   <li>
+				   		<svg class="circle" style="height:300px;">
+				   		<g>
+  							<circle class="circle" cx="50%" cy="50%" r="130" stroke="#E80C50" stroke-width="10" fill="none"/></circle>
+  							<text x="50%" y="50%" font-family="Verdana" font-size="35" fill="blue"><%= students[i].name %></text>
+  						</g>
+						</svg>
+				   	
+				   </li>
+				 </a>
+				<% } %>
+			</ul>
+
+        <% } %>
+
+        <% if(query == "student") { %>
+        	
+        	<svg class="logo" >
+  				<circle cx="50%" cy="50%" r="70" stroke="#E80C50" stroke-width="10" fill="none" /></circle>
+			</svg>
+			<table>
+				<tr>
+					<th> Name </th>
+					<td> <%= child[0].name %> </td>
+				</tr>
+			</table>
+
+        <% } %>
+
+        <% if(query == "addstudent") { %>
+        	<div id="student">
+        		<form id="newstudent" method="post" action="#">
+        		Personal Info <br>
+        		Name <input type="text" name="name">
+        		Allergies <input type="text" name="allergies">
+        		Birthday <input type="date" name="bday">
+        		Notes <input type="text" name="notes">
+        		<input type="submit" value="Add Student">
+
+        		</form>
+        	</div>
+        <% } %>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    
+
+</body>
+
+</html>

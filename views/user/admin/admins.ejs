@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<%include ../modules/head.ejs%>
+</head>
+
+<body>
+
+    <% var usertype = typeof type!='undefined' ? type : 'admin'%>
+    <% var query = typeof query!='undefined' ? query : ''%>
+    <% var admins = typeof admins!='undefined' ? admins : []%>
+    <% var admin = typeof admin!='undefined' ? admin : []%>
+
+    <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Admins</h1>
+                        <a href="/auth/logout">Logout</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div id="wrapper" class="toggled">
+
+        
+        <% include ../modules/sidebar.ejs %>
+            
+        <div id="page-content-wrapper">
+
+        <%if(query == "all" || query == '') {%>
+
+            <a href="/user/admin/admins?option=addadmin">Add Admin</a>
+
+            <ul type="none">
+                <%= admins.length%>
+                <% for(var i=0; i<admins.length; i++) {%>
+                <a href="/users/getadmin?option=admin&id=<%= admins[i].id %>">
+                   <li>
+                        <svg class="circle" style="height:300px;">
+                        <g>
+                            <circle class="circle" cx="50%" cy="50%" r="130" stroke="#E80C50" stroke-width="10" fill="none"/></circle>
+                            <text x="50%" y="50%" font-family="Verdana" font-size="35" fill="blue"><%= admins[i].name %></text>
+                        </g>
+                        </svg>
+                    
+                   </li>
+                 </a>
+                <% } %>
+            </ul>
+
+        <% } %>
+
+        <% if(query == "admin") { %>
+            
+            <svg class="logo" >
+                <circle cx="50%" cy="50%" r="70" stroke="#E80C50" stroke-width="10" fill="none" /></circle>
+            </svg>
+            <table>
+                <tr>
+                    <th> Name </th>
+                    <td> <%= admin[0].name %> </td>
+                </tr>
+            </table>
+
+        <% } %>
+
+        <% if(query == "addadmin") { %>
+            <div id="student">
+                <form id="newadmin" method="post" action="#">
+                Personal Info <br>
+                Name <input type="text" name="name">
+                Allergies <input type="text" name="allergies">
+                Birthday <input type="date" name="bday">
+                <input type="submit" value="Add Admin">
+
+                </form>
+            </div>
+        <% } %>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    
+
+</body>
+
+</html>
