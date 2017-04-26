@@ -27,7 +27,7 @@ html { box-sizing: border-box; }
 *,*:before,*:after { box-sizing: inherit; font-size: 14px; font-weight: 500;}
 
 body {
-	background: #ffff;
+	background: #ffffff;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -80,4 +80,49 @@ a:focus {
 
 .teachers-notes p {
   color:black;
+}
+
+
+.resources {
+  margin-top:30px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  color: #3AA4D8;
+  font-weight:bold;
+  font-family: roboto, sans-serif;
+  background-color:#FEF3C6;
+  list-style-position:inside;
+}
+
+.resources li{
+  color:black;
+  font-weight: bold;
+}
+
+.resources a{
+  color:black;
+  font-weight: bold;
+}
+
+
+.announcements {
+  margin-top:30px;
+  color: #3AA4D8;
+  font-style:bold;
+  font-family: roboto, sans-serif;
+}
+
+.announcements p {
+  color:black;
+}
+
+.message {
+  margin:30px 100px 10px 100px;
+  padding: 50px 50px 50px 50px;
+  color: #3AA4D8;
+  font-weight:bold;
+  font-family: roboto, sans-serif;
+  background-color:#FEF3C6;
+  list-style-position:inside;
+  text-align:center;
 }
