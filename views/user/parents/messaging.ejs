@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<%include ../modules/head.ejs%>
+</head>
+
+<body>
+
+    <% var usertype = typeof type!='undefined' ? type : 'parent'%>
+    <% var query = typeof query!='undefined' ? query : ''%>
+
+    <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Messaging</h1>
+                        <a href="/auth/logout">Logout</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div id="wrapper" class="toggled">
+
+        
+        <% include ../modules/sidebar.ejs %>
+            
+        <div id="page-content-wrapper">
+            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+              <nav class="nav navbar-nav navbar-left header"><h7>Ally Allison</h7></nav>
+              
+              <div class="container">
+                <div class="message">
+                  <h4>Message??</h4>
+                 </div>
+
+                   <div class="message">
+                     <h4>Message 2???</h4>
+                    </div>
+               </div>
+
+        
+
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    
+
+</body>
+
+</html>

@@ -21,7 +21,8 @@
                 <a href="/user/admin/messaging">Messaging</a>
             </li>
         </ul>
-    <% } else if(usertype == 'teacher'){ %>
+    <% }  
+    if(usertype == 'teacher'){ %>
             <ul class="sidebar-nav">
             
                 <li>
@@ -37,5 +38,20 @@
                     <a href="#">Messaging</a>
                 </li>
             </ul>
+    <% } 
+    if(usertype == 'parent'){%>
+            <ul class="sidebar-nav">
+            
+                <li>
+                    <a href="/user/parents/activities">Daily Activities</a>
+                </li>
+                <li>
+                    <a href="/user/parents/resources">Resources</a>
+                </li>
+                <li>
+                    <a href="/user/parents/messaging">Messaging</a>
+                </li>
+            </ul>
     <% } %>
+
 </div>

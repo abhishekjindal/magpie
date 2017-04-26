@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<%include ../modules/head.ejs%>
+</head>
+
+<body>
+
+    <% var usertype = typeof type!='undefined' ? type : 'parent'%>
+    <% var query = typeof query!='undefined' ? query : ''%>
+
+    <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Resources</h1>
+                        <a href="/auth/logout">Logout</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div id="wrapper" class="toggled">
+
+        
+        <% include ../modules/sidebar.ejs %>
+            
+        <div id="page-content-wrapper">
+            
+            <nav class="nav navbar-nav navbar-left header"><h7>Ally Allison</h7></nav>
+
+
+              <img class="logo-main smaller-image border" src="https://s-media-cache-ak0.pinimg.com/originals/a5/25/0d/a5250d3a64a7da69b2eb56da4027ca53.jpg" alt="Doggo">
+
+
+            <div class="container">
+               <div class="col-md-12 text-center teachers-notes">
+              <h4>Announcements</h4>
+                 <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+
+            </div>
+
+            <div class="container">
+            <div class="resources col-xs-12 text-center">
+              <h4>Resources</h4>
+              <ol>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Photo Gallery</a></li>
+               </ol>
+             </div>
+             </div>
+
+
+        
+
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    
+
+</body>
+
+</html>
