@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<%include ../modules/head.ejs%>
+</head>
+
+<body>
+
+    <% var usertype = typeof type!='undefined' ? type : 'teacher'%>
+    <% var query = typeof query!='undefined' ? query : ''%>
+
+    <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Class Activities</h1>
+                        <a href="/auth/logout">Logout</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div id="wrapper" class="toggled">
+
+        
+        <% include ../modules/sidebar.ejs %>
+            
+        <div id="page-content-wrapper">
+            <a href="/user/teachers/activities?option=table">Table Activities</a>
+            <a href="/user/teachers/activities?option=circle">Circle Time Ideas</a>
+            <a href="/user/teachers/activities?option=other">Other</a>
+            <a href="/user/teachers/activities?option=end">End Unit</a>
+        
+        <%if(query == "all" || query == '') {%>
+
+            
+
+        <% } %>
+
+        <% if(query == "table") { %>
+            
+            <table>
+                <tr>
+                    <th>  </th>
+                    <th> Orange Daily Work </th>
+                    <th> Green </th>
+                    <th> Yellow Art </th>
+                    <th> Purple> </th>
+                    <th> Red Loose </th>
+                    <th> Challenges Cooking </th>
+                </tr>
+                <tr>
+                    <th> Monday </th>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                </tr>
+                <tr>
+                    <th> Tuesday </th>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                </tr>
+                <tr>
+                    <th> Wednesday </th>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                </tr>
+                <tr>
+                    <th> Thursday </th>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                </tr>
+                <tr>
+                    <th> Friday </th>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                    <td> <input type="text"> </td>
+                </tr>
+            </table>
+
+        <% } %>
+
+        <% if(query == "circle") { %>
+            
+            <table>
+                <tr>
+                    <th> Day </th>
+                    <th> Activities </th>
+                </tr>
+                <tr>
+                    <th> Monday </th>
+                    <th> <input type="text"> </th>
+                </tr>
+                <tr>
+                    <th> Tuesday </th>
+                    <th> <input type="text"> </th>
+                </tr>
+                <tr>
+                    <th> Wednesday </th>
+                    <th> <input type="text"> </th>
+                </tr>
+                <tr>
+                    <th> Thursday </th>
+                    <th> <input type="text"> </th>
+                </tr>
+                <tr>
+                    <th> Friday </th>
+                    <th> <input type="text"> </th>
+                </tr>
+            </table>
+        <% } %>
+
+        <% if(query == 'other'){%>
+            <div>
+                <textarea rows='10' columns='1000'>Have Scroll Down of Image 1</textarea>
+            </div>
+        <% } %>
+
+        <% if(query == 'end'){%>
+            <div>
+                Create end of unit summary:
+            </div>
+        <% } %>
+
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    
+
+</body>
+
+</html>

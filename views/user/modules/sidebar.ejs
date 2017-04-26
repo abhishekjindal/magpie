@@ -12,7 +12,7 @@
                 <a href="/users/classes">Classes</a>
             </li>
             <li>
-                <a href="/user/admin/admins">Admin</a>
+                <a href="/users/admins">Admin</a>
             </li>
             <li>
                 <a href="/user/admin/news">News Feed</a>
@@ -21,14 +21,14 @@
                 <a href="/user/admin/messaging">Messaging</a>
             </li>
         </ul>
-    <% } else { %>
+    <% } else if(usertype == 'teacher'){ %>
             <ul class="sidebar-nav">
             
                 <li>
-                    <a href="#">Class Activities</a>
+                    <a href="/user/teachers/activities">Class Activities</a>
                 </li>
                 <li>
-                    <a href="#">Student Data</a>
+                    <a href="/users/studentdata">Student Data</a>
                 </li>
                 <li>
                     <a href="#">Daily Notes</a>

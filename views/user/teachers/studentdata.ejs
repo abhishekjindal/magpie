@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<%include ../modules/head.ejs%>
+</head>
+
+<body>
+
+    <% var usertype = typeof type!='undefined' ? type : 'teacher'%>
+    <% var query = typeof query!='undefined' ? query : ''%>
+
+    <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Student Data</h1>
+                        <a href="/auth/logout">Logout</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div id="wrapper" class="toggled">
+
+        
+        <% include ../modules/sidebar.ejs %>
+            
+        <div id="page-content-wrapper">
+            <div>
+                Day Range: <input type="date"> To: <input type="date">
+            </div>
+        
+        <%if(query == "all" || query == '') {%>
+            <a href="/user/teachers/studentdata?option=social">Social</a>
+            
+
+        <% } %>
+
+        <% if(query == "social") { %>
+            <a href="/user/teachers/studentdata?option=all">Activites</a>
+            
+
+        <% } %>
+
+        
+
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    
+
+</body>
+
+</html>

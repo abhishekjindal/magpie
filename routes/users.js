@@ -191,6 +191,11 @@ router.get('/getclass', function(req, res, next) {
   
 });
 
+router.get('/studentdata', function(req, res, next){
+
+	res.render('user/teachers/studentdata');
+});
+
 
 
 module.exports = router;
