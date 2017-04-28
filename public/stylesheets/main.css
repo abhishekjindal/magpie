@@ -64,7 +64,7 @@ input[type=text], input[type=password] {
     border: none;
     cursor: pointer;
     width: 80%;
-    font-size: 15px; 
+    font-size: 15px;
     border-radius: 40px;
 }
 
@@ -90,7 +90,6 @@ ul {
 li {
     float: left;
     padding: 6px;
-    border-right: 1px solid #E80C50;
 }
 
 li a {
@@ -225,4 +224,64 @@ a:focus {
   background-color:#FEF3C6;
   list-style-position:inside;
   text-align:center;
+}
+
+
+.dismissal h1{
+text-align: center;
+padding:10px 0;
+font-size:20px;
+margin:0;
+font-weight:200;
+color:#fff;
+background-color: #E80C50;
+}
+
+#todo-list {
+	text-align: center;
+	background-color:#FEF3C6;
+	margin: 0 auto;
+}
+
+.todo-wrap{
+display:block;
+position:relative;
+padding-left:35px;
+}
+
+input[type="checkbox"]{
+opacity:0;
+}
+.todo{
+display:inline-block;
+font-weight:200;
+padding:10px 5px;
+height:37px;
+position:relative;
+font-size: 20px;
+}
+.todo:before{
+content:'';
+display:block;
+position:absolute;
+top:calc(50% + 2px);
+left:0;
+width:0%;
+height:4px;
+background:#cd4400;
+}
+.todo:after{
+display:block;
+position:absolute;
+z-index:0;
+height:10px;
+width:18px;
+top:9px;
+left:-25px;
+}
+:checked + .todo{
+color:#717171;
+}
+:checked + .todo:before{
+width:100%;
 }
