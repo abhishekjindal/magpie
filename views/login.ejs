@@ -5,17 +5,21 @@
 
 <body>
 <div class= "header">
-	<h1 class="title"> magpie </h1>
+	<img src="/images/mainlogo.png" class="title">
 </div>
 <div class= "body">
 	<div class= "container">
 
 		<form name="login" action="/auth/login" method="post">
-			<svg class="logo" >
-  				<circle cx="50%" cy="50%" r="70" stroke="#E80C50" stroke-width="10" fill="none" /></circle>
-			</svg>
+			<img src="/images/bird.png" class="logo">
+			<div class="logindiv">
+			<img src="/images/email.png" class="login">
 			<input type="text" id="email" name="email" value="email" onclick="empty(this.id)" required>
+			</div>
+			<div class="logindiv">
+			<img src="/images/pw.png" class="login">
 			<input type="password" id="password" name="password" value="password" onclick="empty(this.id)" required>
+			</div>
 			<input type="submit" class="loginButton" value="Log In">
 		</form>
 	</div>

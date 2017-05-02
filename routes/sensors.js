@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
+const date = new Date;
 
 router.get('/receive',function(req, res){
 	res.send('listening');
@@ -29,7 +30,8 @@ router.post('/receive', function(request, respond) {
 });
 
 router.get('/dismissal', function(req, res){
-    res.render('dismissal');
+    console.log(date);
+    res.send('dismissal');
 });
 
 router.post('/dismissal', function(request, respond) {
@@ -86,7 +88,11 @@ router.post('/dismissal', function(request, respond) {
     
     request.on('end', function (){
         //console.log(body);
-        respond.send("received");
+        // respond.send("received");
+        res.writeHead(301,{
+                "Location" : "dismissal"
+            });
+            res.end();
     });
 
     

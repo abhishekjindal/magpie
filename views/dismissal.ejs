@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<%include head.ejs%>
+</head>
+
+<body>
+
+    <% var usertype = typeof type!='undefined' ? type : 'teacher'%>
+    <% var query = typeof query!='undefined' ? query : ''%>
+
+  <div class="dismissal">
+    <h1>Dismissal Queue</h1>
+    <form id="todo-list">
+      <span class="todo-wrap">
+        <input type="checkbox" id="1"/>
+        <label for="1" class="todo">
+          Timmy Turner
+        </label>
+      </span>
+      <span class="todo-wrap">
+        <input type="checkbox" id="2"/>
+        <label for="2" class="todo">
+          Ally Allison
+        </label>
+      </span>
+      <span class="todo-wrap">
+        <input type="checkbox" id="3"/>
+        <label for="3" class="todo">
+          Myles Garrett
+        </label>
+
+      </span>
+    	<span class="todo-wrap">
+        <input type="checkbox" id="4"/>
+        <label for="4" class="todo">
+          Mike Wizinski
+        </label>
+      </span>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

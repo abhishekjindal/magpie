@@ -1,10 +1,11 @@
 body{
 	background-color: #BAB6B7;
 	height: 800px;
+  font-family: 'Roboto', sans-serif;
 }
 
 div.header{
-	height: 20%;
+	height: 24%;
 	color: #E80C50;
 }
 
@@ -17,13 +18,24 @@ div.footer{
 }
 
 div.container{
-	max-height: 99%;
+    max-height: 99%;
     width: 33%;
     background-color: white;
     align-self: center;
     left: 33%;
     position: absolute;
     text-align: center;
+}
+
+.containerhome{
+    max-height: 99%;
+    width: 34%;
+    background-color: white;
+    align-self: center;
+    left: 33%;
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
 }
 
 button.forgot{
@@ -38,19 +50,54 @@ button.forgot{
     font-size: 15px;
 }
 
-h1.title{
-	position: absolute;
-    left: 1%;
-    font-size: 40px;
+.title{
+    position: absolute;
+    left: 2%;
+    height: 75px;
+    width: 150px;
+}
+
+.logo{
+    height: 150px;
+    padding: 9%;
+}
+
+.mainlogo{
+    height: 400px;
+    padding: 9%;
+}
+
+#login{
+    float: left;
+    color: #E80C50;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login{
+    width: 10%;
+    display: inline;
+    box-sizing: border-box;
+    color: #bab6b7;
+    float: left;
+    border: solid #7d7c7c;
+    border-width: 0px 0px 2px 0px;
+    margin:3px;
+
+}
+
+.logindiv{
+  margin: 10px;
 }
 
 input[type=text], input[type=password] {
-    width: 90%;
-    padding: 3% 20px;
-    margin: 3% 0;
+    width: 80%;
+    padding: 3% 18px;
+    margin: 4px 0;
     display: inline-block;
     border: solid #7d7c7c;
-    box-sizing: border-box;
     border-width: 0px 0px 2px 0px;
     font-size: 15px;
     color: #bab6b7;
@@ -68,14 +115,7 @@ input[type=text], input[type=password] {
     border-radius: 40px;
 }
 
-svg.logo{
-	height: 40%;
-    padding: 9%;
-}
-svg.mainlogo{
-    height: 400px;
-    padding: 9%;
-}
+
 
 ul {
     position: absolute;
@@ -87,16 +127,7 @@ ul {
     overflow: hidden;
 }
 
-li {
-    float: left;
-    padding: 6px;
-}
 
-li a {
-    color: #E80C50;
-    text-align: center;
-    text-decoration: none;
-}
 
 .logo-main {
     display: block;
@@ -121,14 +152,9 @@ nav {
     white-space: nowrap;
     a { display: inline-block; }
 }
-
+/*
 html { box-sizing: border-box; }
 *,*:before,*:after { box-sizing: inherit; font-size: 14px; font-weight: 500;}
-
-body {
-    background: #ffffff;
-    font-family: 'Roboto', sans-serif;
-}
 
 nav {
     background: #E80C50;
@@ -141,7 +167,7 @@ a {
 a:focus {
     background: #f1f1f1;
     outline: none;
-}
+}*/
 
 
 .header {

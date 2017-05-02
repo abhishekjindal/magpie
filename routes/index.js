@@ -6,7 +6,9 @@ var query = "";
 
 
 /* GET home page. */
-
+router.get('/dismissal', function(req,res,next){
+	res.render('dismissal');
+});
 
 router.get('/user/*', function(req, res, next){
 	local = {
@@ -26,6 +28,7 @@ router.get('/user/*', function(req, res, next){
  router.get('/*', function(req, res, next) {
    res.render(req.path.split('/')[1]);
  });
+
 
  
 
