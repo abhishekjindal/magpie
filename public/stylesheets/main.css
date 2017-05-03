@@ -1,4 +1,4 @@
-body{
+body.homebody{
 	background-color: #BAB6B7;
 	height: 800px;
   font-family: 'Roboto', sans-serif;
@@ -67,9 +67,27 @@ button.forgot{
     padding: 9%;
 }
 
+ul.home {
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 #login{
     float: left;
     color: #E80C50;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+#logout{
+    float: left;
+    color: white;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
@@ -92,7 +110,7 @@ button.forgot{
   margin: 10px;
 }
 
-input[type=text], input[type=password] {
+.logindiv input[type=text], input[type=password] {
     width: 80%;
     padding: 3% 18px;
     margin: 4px 0;
@@ -103,7 +121,7 @@ input[type=text], input[type=password] {
     color: #bab6b7;
 }
 
-.loginButton, .registerButton{
+.loginButton{
     background-color: #E80C50;
     color: white;
     padding: 3% 20px;
@@ -114,20 +132,6 @@ input[type=text], input[type=password] {
     font-size: 15px;
     border-radius: 40px;
 }
-
-
-
-ul {
-    position: absolute;
-    right: 2%;
-    top: 5%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-
 
 .logo-main {
     display: block;
@@ -141,173 +145,126 @@ ul {
     border-radius: 50%;
   }
 
-  .smaller-image {
+.smaller-image {
     width: 100px;
   }
 
-nav {
-    overflow-x: auto;
-    user-select: none;
-    text-align: center;
-    white-space: nowrap;
-    a { display: inline-block; }
-}
-/*
-html { box-sizing: border-box; }
-*,*:before,*:after { box-sizing: inherit; font-size: 14px; font-weight: 500;}
-
-nav {
-    background: #E80C50;
-}
-a {
-    color: white;
-    text-decoration: none;
+#header-wrapper{
     padding: 20px;
+    position: relative;
+    background-color: #E80C50; 
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
-a:focus {
-    background: #f1f1f1;
-    outline: none;
-}*/
 
+.activity {
+    position: relative;
+    list-style-type: none;
+    margin: 0px;
+    padding: 10px;
+    overflow: hidden;
+    height: 100px;
+}
 
-.header {
-  overflow-x: auto;
-    user-select: none;
+.activity li{
+    display: inline;
+    margin: 20px;
+    background-color: #7CD0FA;
+    padding: 12px;
+    font-size: medium;
+}
+
+.activity li:active,
+.activity li:visited{
+    background-color: #3AA4D8;
+}
+
+.activity li a {
+    text-decoration: none;
+    color: black;
+}
+
+.table table, td, th {    
+    border: 1px solid #ddd;
     text-align: left;
-    white-space: nowrap;
-  padding-left: 20px;
-  color:white;
 }
 
-.daily-activity {
-  margin-top:30px;
-  padding-top: 20px;
-  padding-bottom: 5px;
-  color: #3AA4D8;
-  font-weight:bold;
-  font-family: roboto, sans-serif;
-  background-color:#FEF3C6;
-  list-style-position:inside;
+.table table {
+    border-collapse: collapse;
+    width: 100%;
 }
 
-.daily-activity li{
-  color:black;
-  font-weight:bold;
+.table th, td {
+    padding: 15px;
 }
 
-
-.teachers-notes {
-  margin-top:30px;
-  color: #3AA4D8;
-  font-style:bold;
-  font-family: roboto, sans-serif;
+.table input[type=text]{
+    width: 100%;
+    padding: 3% 18px;
+    margin: 4px 0;
+    display: inline-block;
+    font-size: 15px;
+    color: black;
+    border:none;
 }
 
-.teachers-notes p {
-  color:black;
+.table tr:nth-child(odd){
+  background-color: #f2f2f2
 }
 
-
-.resources {
-  margin-top:30px;
-  padding-top: 20px;
-  padding-bottom: 5px;
-  color: #3AA4D8;
-  font-weight:bold;
-  font-family: roboto, sans-serif;
-  background-color:#FEF3C6;
-  list-style-position:inside;
+.table2 table, td, th {    
+    border: 1px solid #ddd;
+    text-align: center;
 }
 
-.resources li{
-  color:black;
-  font-weight: bold;
+.table2 table {
+    border-collapse: collapse;
+    width: 100%;
 }
 
-.resources a{
-  color:black;
-  font-weight: bold;
+.table2 th{
+    padding: 15px;
+    width: 200px;
 }
 
+.table2 td {
+    padding: 15px;
+    width: 420px;
+} 
 
-.announcements {
-  margin-top:30px;
-  color: #3AA4D8;
-  font-style:bold;
-  font-family: roboto, sans-serif;
+.table2 input[type=text]{
+    width: 100%;
+    padding: 3% 18px;
+    margin: 4px 0;
+    display: inline-block;
+    font-size: 15px;
+    color: black;
+    border:none;
 }
 
-.announcements p {
-  color:black;
+.table2 tr:nth-child(odd){
+  background-color: #f2f2f2
 }
 
-.message {
-  margin:30px 100px 10px 100px;
-  padding: 50px 50px 50px 50px;
-  color: #3AA4D8;
-  font-weight:bold;
-  font-family: roboto, sans-serif;
-  background-color:#FEF3C6;
-  list-style-position:inside;
-  text-align:center;
+.visual{
+  width:80%;
+  float:left;
+}
+
+.kids {
+  width:20%;
+  float:right;
 }
 
 
-.dismissal h1{
-text-align: center;
-padding:10px 0;
-font-size:20px;
-margin:0;
-font-weight:200;
-color:#fff;
-background-color: #E80C50;
-}
-
-#todo-list {
+#dismissal {
 	text-align: center;
-	background-color:#FEF3C6;
+	background-color:white;
 	margin: 0 auto;
+  width:50%;
 }
 
-.todo-wrap{
-display:block;
-position:relative;
-padding-left:35px;
-}
-
-input[type="checkbox"]{
-opacity:0;
-}
-.todo{
-display:inline-block;
-font-weight:200;
-padding:10px 5px;
-height:37px;
-position:relative;
-font-size: 20px;
-}
-.todo:before{
-content:'';
-display:block;
-position:absolute;
-top:calc(50% + 2px);
-left:0;
-width:0%;
-height:4px;
-background:#cd4400;
-}
-.todo:after{
-display:block;
-position:absolute;
-z-index:0;
-height:10px;
-width:18px;
-top:9px;
-left:-25px;
-}
-:checked + .todo{
-color:#717171;
-}
-:checked + .todo:before{
-width:100%;
+#dismissal td{
+  background-color:white;
 }

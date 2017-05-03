@@ -11,13 +11,14 @@
     <% var usertype = typeof type!='undefined' ? type : 'teacher'%>
     <% var query = typeof query!='undefined' ? query : ''%>
 
-    <div id="page-content-wrapper">
+    <div id="header-wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>Class Activities</h1>
-                        <a href="/auth/logout">Logout</a>
-                        
+                        <ul class="home">
+                            <li><a href="/auth/logout" id='logout'>Logout</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -29,59 +30,59 @@
         <% include ../modules/sidebar.ejs %>
             
         <div id="page-content-wrapper">
-            <a href="/user/teachers/activities?option=table">Table Activities</a>
-            <a href="/user/teachers/activities?option=circle">Circle Time Ideas</a>
-            <a href="/user/teachers/activities?option=other">Other</a>
-            <a href="/user/teachers/activities?option=end">End Unit</a>
-        
 
-        <% if(query == "all" || query == "table") { %>
+        <ul class='activity'>
+            <li><a href="/user/teachers/activities?option=table">Table Activities</a></li>
+            <li><a href="/user/teachers/activities?option=circle">Circle Time Ideas</a></li>
+        </ul>
+
+        <% if(query == "all" || query == "table" || query == "") { %>
             
-            <table>
+            <table class="table">
                 <tr>
-                    <th>  </th>
-                    <th> Orange Daily Work </th>
-                    <th> Green </th>
-                    <th> Yellow Art </th>
-                    <th> Purple> </th>
-                    <th> Red Loose </th>
-                    <th> Challenges Cooking </th>
+                    <th> DAY </th>
+                    <th style="color:orange;"> Orange Daily Work </th>
+                    <th style="color:green;"> Green </th>
+                    <th style="color:gold;"> Yellow Art </th>
+                    <th style="color:purple;"> Purple </th>
+                    <th style="color:#E80C50;"> Red Loose </th>
+                    <th style="color:blue;"> Challenges Cooking </th>
                 </tr>
                 <tr>
-                    <th> Monday </th>
-                    <td> <input type="text" value="monday"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
+                    <th> M </th>
+                    <td> <input type="text" value="Corn w/ tissue paper"> </td>
+                    <td> <input type="text" value="magic fish what makes 6"> </td>
+                    <td> <input type="text" value="Nature self portraits"> </td>
+                    <td> <input type="text" value="Totem Pole animals"> </td>
+                    <td> <input type="text" value="Nature names"> </td>
+                    <td> <input type="text" value="Taste pumpkin seeds"> </td>
                 </tr>
                 <tr>
-                    <th> Tuesday </th>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
+                    <th> Tu </th>
+                    <td> <input type="text" value="Magic Fish"> </td>
+                    <td> <input type="text" value="Paper shapes"> </td>
+                    <td> <input type="text" value="Weaving"> </td>
+                    <td> <input type="text" value="Totem Pole animals"> </td>
+                    <td> <input type="text" value="Nature names"> </td>
+                    <td> <input type="text" value="Sunflower seeds taste"> </td>
                 </tr>
                 <tr>
-                    <th> Wednesday </th>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
+                    <th> We </th>
+                    <td> <input type="text" value="Corn bean squash"> </td>
+                    <td> <input type="text" value="plant 3 sisters"> </td>
+                    <td> <input type="text" value="Traced a pumpkin"> </td>
+                    <td> <input type="text" value="Totem Pole animals"> </td>
+                    <td> <input type="text" value="Outdoor: plant names"> </td>
+                    <td> <input type="text" value="Dehydrated taste fruit veg."> </td>
                 </tr>
                 <tr>
-                    <th> Thursday </th>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
-                    <td> <input type="text"> </td>
+                    <th> Th </th>
+                    <td> <input type="text" value="Beans"> </td>
+                    <td> <input type="text" value="Paper Plate tipi"> </td>
+                    <td> <input type="text" value="Paint masks background"> </td>
+                    <td> <input type="text" value="H2O color sunsets"> </td>
+                    <td> <input type="text" value="Ramp game"> </td>
+                    <td> <input type="text" value="Cooked corn muffins taste beans"> </td>
                 </tr>
 
             </table>
@@ -90,41 +91,30 @@
 
         <% if(query == "circle") { %>
             
-            <table>
+            <table class="table2">
                 <tr>
-                    <th> Day </th>
-                    <th> Activities </th>
+                    <th> DAY </th>
+                    <td> Activities </td>
                 </tr>
                 <tr>
                     <th> Monday </th>
-                    <th> <input type="text"> </th>
+                    <td> <input type="text" value="pop indian corn - The Rough Face Girl"> </td>
                 </tr>
                 <tr>
                     <th> Tuesday </th>
-                    <th> <input type="text"> </th>
+                    <td> <input type="text" value="9:40 lockdown - The Girl That Loved Wild Horses"> </td>
                 </tr>
                 <tr>
                     <th> Wednesday </th>
-                    <th> <input type="text"> </th>
+                    <td> <input type="text" value="The Three Snow Bears - Used drums for sounds"> </td>
                 </tr>
                 <tr>
                     <th> Thursday </th>
-                    <th> <input type="text"> </th>
+                    <td> <input type="text" value="The Legend of the Indian Paint Brush"> </td>
                 </tr>
             </table>
         <% } %>
 
-        <% if(query == 'other'){%>
-            <div>
-                <textarea rows='10' columns='1000'>Have Scroll Down of Image 1</textarea>
-            </div>
-        <% } %>
-
-        <% if(query == 'end'){%>
-            <div>
-                Create end of unit summary:
-            </div>
-        <% } %>
 
         </div>
         <!-- /#page-content-wrapper -->

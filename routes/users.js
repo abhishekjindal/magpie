@@ -192,8 +192,37 @@ router.get('/getclass', function(req, res, next) {
 });
 
 router.get('/studentdata', function(req, res, next){
+  const results = [];
+  const id= req.session.row_id;
+    // SQL Query > Getting classes each child is taking up
+    if(typeof id != 'undefined'){
+    const query = client.query("select * from children inner join teachers on teachers.child_id=children.child_id and teachers.user_id=\'"+id+"\'");
+    // Stream results back one row at a time
+    query.on('row', (row) => {
+      results.push(row);
+    });
+    // After all data is returned, close connection and return results
+    query.on('end', () => {
+      local={
+        userid : req.session.row_id,
+        type : req.session.type,
+        query : req.query.option,
+        students : results
+      };
+      res.render('user/teachers/studentdata', local);
+    });
+  }
+  else{
+    local={
+        userid : req.session.row_id,
+        type : req.session.type,
+        query : req.query.option,
+        students : results
+      };
+      res.render('user/teachers/studentdata', local);
+  }
 
-	res.render('user/teachers/studentdata');
+	
 });
 
 

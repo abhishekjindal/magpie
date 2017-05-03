@@ -11,12 +11,14 @@
     <% var usertype = typeof type!='undefined' ? type : 'teacher'%>
     <% var query = typeof query!='undefined' ? query : ''%>
 
-    <div id="page-content-wrapper">
+    <div id="header-wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>Dismissal Queue</h1>
-                        <a href="/auth/logout">Logout</a>
+                        <ul class="home">
+                            <li><a href="/auth/logout" id='logout'>Logout</a></li>
+                        </ul>
                         
                     </div>
                 </div>
@@ -29,7 +31,11 @@
         <% include ../modules/sidebar.ejs %>
 
         <div class="dismissal">
-          <table id="todo-list">
+          <table id="dismissal">
+            <tr><td onclick="changeState(this)">savkgds</td></tr>
+            <tr><td onclick="changeState(this)">savkgds</td></tr>
+            <tr><td onclick="changeState(this)">savkgds</td></tr>
+            <tr><td onclick="changeState(this)">savkgds</td></tr>
           </table>
         </div>
 
@@ -50,13 +56,24 @@
                   setInterval("ajax()",3000);
               });
 
+              function changeState(element){
+                var color = JSON.stringify(element.style.backgroundColor);
+
+                  if(element.style.backgroundColor==""){
+                    element.style.backgroundColor = "yellow";
+                  } else if(element.style.backgroundColor=="yellow"){
+                    element.style.backgroundColor = "red";
+                  }
+              }
+
             function ajax(){
                 $.get("/sensors/dismissal", function(data, status){
                     for(var i=0; i<data.length; i++){
                       if(!inArray(dismiss, data[i].name)){
                         dismiss.push(data[i].name);
-                        var table = document.getElementById("todo-list");
+                        var table = document.getElementById("dismissal");
                         var row = table.insertRow(0);
+                        row.addEventListener("click", changeState(this));
                         var cell = row.insertCell(0);
                         cell.innerHTML = data[i].name;
                       }
