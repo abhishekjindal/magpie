@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
 
     <div id="wrapper" class="toggled">
 
@@ -34,13 +34,8 @@
             <a href="/user/teachers/activities?option=other">Other</a>
             <a href="/user/teachers/activities?option=end">End Unit</a>
         
-        <%if(query == "all" || query == '') {%>
 
-            
-
-        <% } %>
-
-        <% if(query == "table") { %>
+        <% if(query == "all" || query == "table") { %>
             
             <table>
                 <tr>
@@ -114,10 +109,6 @@
                 </tr>
                 <tr>
                     <th> Thursday </th>
-                    <th> <input type="text"> </th>
-                </tr>
-                <tr>
-                    <th> Friday </th>
                     <th> <input type="text"> </th>
                 </tr>
             </table>

@@ -56,8 +56,17 @@ router.post('/login', function(req, res, next) {
     	if (!loginsuccess) {
       		res.send("username does not exist");
       	}else{
-      		req.session.loggedin = true; 		
-      		res.redirect('/user/index');
+      		req.session.loggedin = true;
+      		var type = req.session.type;
+      		if(type=='admin'){
+      			res.redirect('/users/students');
+      		}
+      		else if(type=='teacher'){
+      			res.redirect('/user/teachers/activities');
+      		} 		
+      		else{
+      			res.redirect('/user/index');
+      		}
       	}
     });
 

@@ -29,15 +29,22 @@ router.post('/receive', function(request, respond) {
     respond.send("received");
 });
 
-router.get('/dismissal', function(req, res){
-    console.log(date);
-    res.send('dismissal');
+router.get('/dismissal', function(req,res){
+    const results = [];
+    const query = client.query('SELECT * FROM dismissal;');
+    query.on('row', (row) => {
+         results.push(row);
+    });
+    query.on('end', () => {
+        res.send(results);
+    });
 });
 
 router.post('/dismissal', function(request, respond) {
     var body = '';
     filePath = __dirname + '/sensors/';
     const results = [];
+    var childname = '';
     //console.log(request.files);
 
     
@@ -69,12 +76,14 @@ router.post('/dismissal', function(request, respond) {
                 const query1 = client.query('SELECT * FROM children WHERE child_id=($1)',[child_id_int]);
 
                 query1.on('row', (row) => {
+                    childname = row.name;
                     results.push(row);
-                    // console.log(results);
+                    console.log(childname);
 
                 });
                 query1.on('end', () => { 
-                  res.render(results);
+                  done();
+                  const query2 = client.query('INSERT INTO dismissal(name) VALUES($1);',[childname])
                 });
 
             });
@@ -88,11 +97,7 @@ router.post('/dismissal', function(request, respond) {
     
     request.on('end', function (){
         //console.log(body);
-        // respond.send("received");
-        res.writeHead(301,{
-                "Location" : "dismissal"
-            });
-            res.end();
+        respond.send("received");
     });
 
     
