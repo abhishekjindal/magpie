@@ -19,6 +19,11 @@ const query = client.query(
   +'birthday DATE not null,'
   +'allergies VARCHAR(30),'
   +'PRIMARY KEY(child_id));'
+
+  +'CREATE TABLE IF NOT EXISTS dismissal('
+  +'id INT not null,'
+  +'name VARCHAR(30) not null);'
+  
   
   +'CREATE TABLE IF NOT EXISTS sensors('
   +'node_id VARCHAR(50) not null,'

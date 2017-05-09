@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+##Bash script to transfer data from the csv files on the server to the database table
+##Clean up after the files have been copied
+
+
+##read the csv files and copy them into the database
+cat /location/of the csv/files/<starting_letter_of_csv_file>*.csv | psql -U <username> -d <schemaname> -c "COPY sensors(node_id,child_id,time_stamp,input_output,type) FROM stdin DELIMITER ';' CSV HEADER;"
+
+
+##Clean up the csv files after them into the database
+rm -r /location/of the csv/files/<starting_letter_of_csv_file>*.csv

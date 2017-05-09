@@ -32,10 +32,7 @@
 
         <div class="dismissal">
           <table id="dismissal">
-            <tr><td onclick="changeState(this)">savkgds</td></tr>
-            <tr><td onclick="changeState(this)">savkgds</td></tr>
-            <tr><td onclick="changeState(this)">savkgds</td></tr>
-            <tr><td onclick="changeState(this)">savkgds</td></tr>
+            
           </table>
         </div>
 
@@ -73,7 +70,6 @@
                         dismiss.push(data[i].name);
                         var table = document.getElementById("dismissal");
                         var row = table.insertRow(0);
-                        row.addEventListener("click", changeState(this));
                         var cell = row.insertCell(0);
                         cell.innerHTML = data[i].name;
                       }

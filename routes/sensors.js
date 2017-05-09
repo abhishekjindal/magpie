@@ -53,9 +53,9 @@ router.post('/dismissal', function(request, respond) {
         console.log(body);
         parameters = body.split('&');
         console.log(parameters);
-        date = (parameters[0].split('='))[1];
-        time = (parameters[2].split('='))[1];
-        id = (parameters[1].split('='))[1];
+        const date = (parameters[0].split('='))[1];
+        const time = (parameters[2].split('='))[1];
+        const id = (parameters[1].split('='))[1];
         const query = client.query('SELECT child_id FROM sensors WHERE node_id=($1)',[id]);
         child_id_int = -1;
         query.on('row', (row) => {

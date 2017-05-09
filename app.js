@@ -9,6 +9,7 @@ var session = require("express-session");
 //var LocalStrategy = require('passport-local').Strategy;
 
 var index = require('./routes/index');
+var analytics = require('./routes/analytics');
 var users = require('./routes/users');
 var auth = require('./routes/auth');
 var sensors = require('./routes/sensors');
@@ -35,6 +36,7 @@ app.use(session({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// app.use('/analytics', analytics);
 app.use('/auth', auth);
 app.use('/sensors', sensors);
 app.use('/users', users);
