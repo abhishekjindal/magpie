@@ -32,7 +32,7 @@ const query = client.query(
   +'insert into teachers values(3,2,1,23,\'gluten\',\'10-10-1994\');'
   +'insert into teachers values(3,3,1,23,\'gluten\',\'10-10-1994\');'
 
-  +'insert into sensors values ('e2005186060f02142140374c','2017-4-20 14:00:00',3,true,'dismissal');'
+  +'insert into sensors values (\'e2005186060f02142140374c\',\'2017-4-20 14:00:00\',3,true,\'dismissal\');'
   );
 query.on('end', () => { client.end(); });
 
